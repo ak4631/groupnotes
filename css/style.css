@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Mate+SC&family=Space+Grotesk:wght@500&family=Work+Sans:wght@500&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Mate SC', serif;
+}
+#gp-design{
+    border:4px solid brown;
+    border-radius: 5px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+#gp-name{
+    padding: 10px;
+    border:2px solid black;
+    color:white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-paperclip{
+    padding-right:5px;
+}
+#gp-chats{
+    max-height:86vh;
+    /* border:2px solid blue; */
+    box-sizing: border-box;
+    overflow: auto;
+    z-index:1;
+}
+#gp-chats p{
+    border: 2px solid black;
+    padding:2px;
+    font-size:18px;
+    border-radius: 5px;
+    max-height: fit-content;
+    max-width: fit-content;
+    line-break: anywhere;
+}
+.msg{
+    padding:2px;
+    /* border:2px solid red; */
+}
+.msg h3{
+    margin: 2px;
+}
+#gp-send{
+    /* border:2px solid green; */
+    position: fixed;
+    width: 100%;
+    top: 94vh;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background-color: whitesmoke;
+}
+@media (max-width:600px) {
+    #gp-send{
+        top:93vh;
+    }
+}
+#gp-send form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        width: 99%;
+        margin: auto;
+}
+
+#gp-send form input{
+    font-size:20px;
+    padding: 10px;
+    /* font-weight: 800; */
+    border-radius: 5px;
+}
+form input[type="text"]{
+    font-family: 'Bree Serif', serif;
+    width: 95%;
+}
+form input[type="submit"]{
+    font-family: 'Bree Serif', serif;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-all{
+    /* border: 2px solid grey; */
+    padding: 2px;
+    margin: 2px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    gap:10px;
+    font-family: 'Bree Serif', serif;
+}
+.chat-all p{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.uploadform {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 2px solid red;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: none;
+        -webkit-box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+            -moz-box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+            box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+}
+
+@media (max-width:600px) {
+    .uploadform {
+        width: 75%;
+    }
+}
+
+.header {
+    border: 2px solid blue;
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+.uploadform form {
+    /* border:2px solid black; */
+    font-size: 18px;
+
+}
+
+.uploadform form input {
+    font-size: 18px;
+    font-family: 'Mate SC', serif;
+}
+
+.header h3 {
+    font-size: 20px;
+}
+
+.active {
+    display: flex;
+    z-index:2;
+    background-color: whitesmoke;
+    border:3px solid black;
+    border-radius: 5px;
+}
+.bringup{
+        border: 2px solid black;
+            text-align: center;
+}
+
+.pdf-sec {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 45%;
+    display: none;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius:5px;
+    padding:5px;
+    -webkit-box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+    -moz-box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+    box-shadow: 1px 2px 14px 2px rgba(8, 8, 8, 1);
+}
+
+.pdfs-content {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 30vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.pdfs-content a {
+    /* border: 2px solid blue; */
+    margin: 10px;
+    padding: 10px;
+    font-size:18px;
+}
+
+.title-pdf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.all-pdf-visible {
+    display: block;
+    z-index: 5;
+}
+.pdf-here{
+    border:2px solid black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin:0px;
+    margin: 0px auto;
+    background-color: whitesmoke;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.pdf-here:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+@media (max-width:600px) {
+    .pdf-sec {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.uploadform form input[type="file"]{
+    width: 90%;
+    margin: auto;
+    margin-bottom:5px;
+}
+.uploadform form input[type="submit"] {
+    margin-top:5px;
+    border: 4px solid blue;
+    padding:5px;
+    font-weight:bold;
+    color: white;
+    border-radius:5px;
+    background-color: black;
+    cursor: pointer;
+}
+.uploadform form input[type="submit"]:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/Signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div id="form-data">
+        <form action="php/CreateGp.php" method="post">
+          <h1>Create Group</h1>
+          <label for="gp-name"
+            >Group Name
+            <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
+          ></label>
+          <input type="text" id="gp-name" name="gp-name" required />
+          <label for="gp-pass"
+            >Group Password
+            <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
+          ></label>
+          <input type="password" id="gp-pass" name="gp-pass" required />
+          <label for="ad-mail"
+            >Admin Mail
+            <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
+          ></label>
+          <input type="email" id="ad-mail" name="ad-mail" required />
+          <label for="gp-code"
+            >Group Code
+            <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
+          ></label>
+          <input type="text" id="gp-code" name="gp-code" required />
+          <input type="submit" value="Create Account" />
+          <a href="JoinGp.html">Join Group</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
