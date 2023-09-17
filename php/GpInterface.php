@@ -38,48 +38,49 @@ $row=mysqli_fetch_assoc($result);
             <a href="logout.php"><i class="fa-sharp fa-solid fa-right-from-bracket fa-xl" style="color: #a5ed07;"></i></a>
           </div>
         </div>
-        <div id="gp-chats">
-          <div class="msg">
-            <?php 
-              $chat_id=$_SESSION['id'];
-              $sql2="select * from chatdata where chat_id='$chat_id'";
-              $res=mysqli_query($conn,$sql2);
+        <div class="main-content">
+          <div id="gp-chats">
+            <div class="msg">
+              <?php 
+                $chat_id=$_SESSION['id'];
+                $sql2="select * from chatdata where chat_id='$chat_id'";
+                $res=mysqli_query($conn,$sql2);
 
-              if(!$res){
-                echo "Error is: ".mysqli_error($conn);
-                exit;
-              }
+                if(!$res){
+                  echo "Error is: ".mysqli_error($conn);
+                  exit;
+                }
 
-              while($allChats=mysqli_fetch_assoc($res)){
-                $chat_num=$allChats['chat_cnt'];
-            ?>
-            <div class="chat-all">
-            <p>
-              <?php echo $allChats['chats'] ?>
-            </p>
-            <a href="del_chat.php?del_task=<?php echo $chat_num ?>" > <i class="fa-sharp fa-solid fa-trash fa-lg" style="color: #d60000;"></i></a>
-              </div>
-            <?php
-              }
-            ?>
+                while($allChats=mysqli_fetch_assoc($res)){
+                  $chat_num=$allChats['chat_cnt'];
+              ?>
+              <div class="chat-all">
+              <p>
+                <?php echo $allChats['chats'] ?>
+              </p>
+              <a href="del_chat.php?del_task=<?php echo $chat_num ?>" > <i class="fa-sharp fa-solid fa-trash fa-lg" style="color: #d60000;"></i></a>
+                </div>
+              <?php
+                }
+              ?>
+            </div>
           </div>
+          <footer>
+            <div id="gp-send">
+              <form action="saveChat.php" method="post">
+                <input
+                  type="text"
+                  name="chat"
+                  id="chat"
+                  placeholder="Enter your Message"
+                />
+                <span class="bringup"><a href="#">Upload Pdf</a></span>
+                <input type="submit" value="Send" id="send-message" />
+                
+              </form>
+            </div>
+          </footer>
         </div>
-        <footer>
-          <div id="gp-send">
-            <form action="saveChat.php" method="post">
-              <input
-                type="text"
-                name="chat"
-                id="chat"
-                placeholder="Enter your Message"
-              />
-              <span class="bringup"><a href="#">Upload Pdf</a></span>
-              <input type="submit" value="Send" id="send-message" />
-              
-            </form>
-          </div>
-        </footer>
-
 
 
         <div class="uploadform">

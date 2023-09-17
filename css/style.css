@@ -2,6 +2,7 @@
 *{
     margin:0px;
     padding:0px;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -12,7 +13,7 @@ body{
 #gp-design{
     border:4px solid brown;
     border-radius: 5px;
-    height: 100vh;
+    /* height: 100vh; */
     box-sizing: border-box;
 }
 #gp-name{
@@ -50,8 +51,9 @@ body{
 .msg h3{
     margin: 2px;
 }
+/*
 #gp-send{
-    /* border:2px solid green; */
+    border:2px solid green; 
     position: fixed;
     width: 100%;
     top: 94vh;
@@ -71,7 +73,7 @@ body{
         width: 99%;
         margin: auto;
 }
-
+*/
 #gp-send form input{
     font-size:20px;
     padding: 10px;
@@ -250,3 +252,34 @@ form input[type="submit"]{
     transform: scale(1.1);
 }
 
+.main-content {
+    border: 2px solid blue;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content #gp-chats {
+    height: 85vh;
+    border: 2px solid red;
+}
+
+.main-content #gp-send {
+    width: 100%;
+    padding: 0px;
+}
+
+#gp-send form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.bringup {
+    border: 4px solid black;
+    text-align: center;
+}
