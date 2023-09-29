@@ -24,3 +24,9 @@ pdf_hide.onclick = () => {
   chatsec.style.opacity = "1";
   pdf_section.classList.remove("all-pdf-visible");
 };
+
+$(document).ready(function () {
+  setInterval(function () {
+    $("#gp-chats").load(window.location.href + " #gp-chats");
+  }, 3000);
+});
