@@ -16,8 +16,8 @@
   <body>
     <div id="main">
       <div id="form-data">
-        <form action="php/CreateGp.php" method="post">
-          <h1>Create Group</h1>
+        <form action="php/removeGroup.php" method="post">
+          <h1>Delete Group</h1>
           <label for="gp-name"
             >Group Name
             <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
@@ -33,14 +33,8 @@
             <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
           ></label>
           <input type="email" id="ad-mail" name="ad-mail" required />
-          <label for="gp-code"
-            >Group Code
-            <i class="fa-solid fa-asterisk fa-xs" style="color: #de1102"></i
-          ></label>
-          <input type="text" id="gp-code" name="gp-code" required />
-          <input type="submit" value="Create Account" />
+          <input type="submit" value="Delete Group" />
           <a href="JoinGp.html">Join Group</a>
-          <a href="deletegroup.html">Delete Group</a>
         </form>
       </div>
     </div>

@@ -35,13 +35,14 @@ $row=mysqli_fetch_assoc($result);
         <div id="gp-name">
           <h1><?php echo $row['gp_Name'] ?></h1>
           <div class="links">
+            <span><a href="#" id="rechats">Chats</a></span>
             <span class="all-pdfs-show"><a href="#"><i class="fa-sharp fa-solid fa-paperclip fa-xl" style="color: #ced4de;"></i></a></span>
             <a href="logout.php"><i class="fa-sharp fa-solid fa-right-from-bracket fa-xl" style="color: #a5ed07;"></i></a>
           </div>
         </div>
         <div class="main-content">
           <div id="gp-chats">
-            <div class="msg">
+            <div class="msg" id="chat_content">
               <?php 
                 $chat_id=$_SESSION['id'];
                 $sql2="select * from chatdata where chat_id='$chat_id'";
@@ -69,12 +70,13 @@ $row=mysqli_fetch_assoc($result);
           <footer>
             <div id="gp-send">
               <form action="saveChat.php" method="post">
-                <input
-                  type="text"
-                  name="chat"
-                  id="chat"
-                  placeholder="Enter your Message"
-                />
+                  
+                  <input
+                    type="text"
+                    name="chat"
+                    id="chat"
+                    placeholder="Enter your Message"
+                  />
                 <span class="bringup"><a href="#">Upload Pdf</a></span>
                 <input type="submit" value="Send" id="send-message" />
                 

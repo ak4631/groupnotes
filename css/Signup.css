@@ -75,7 +75,9 @@ form h1{
     font-family: 'Space Grotesk',
         sans-serif;
 }
-
+form a{
+    padding-top:5px;
+}
 @media (max-width:600px) {
     form {
         width: auto;

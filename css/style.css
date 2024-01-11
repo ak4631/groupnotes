@@ -286,6 +286,8 @@ form input[type="submit"] {
 .main-content #gp-chats {
     height: 82vh;
     /*border: 2px solid red;*/
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @media(max-width:600px) {
