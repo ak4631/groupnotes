@@ -3,9 +3,9 @@
 require "../includes/dbconnect.php";
 
 $gp_name=$_POST['gp-name'];
-$gp_password=$_POST['gp-pass'];
+$gp_password=md5($_POST['gp-pass']);
 $gp_admin=$_POST['ad-mail'];
-$gp_code=$_POST['gp-code'];
+$gp_code=md5($_POST['gp-code']);
 
 $sql1="select gp_Code from group_details where gp_Code='$gp_code'";
 

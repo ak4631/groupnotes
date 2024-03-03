@@ -24,10 +24,3 @@ pdf_hide.onclick = () => {
   chatsec.style.opacity = "1";
   pdf_section.classList.remove("all-pdf-visible");
 };
-let reload_chat = document.getElementById("rechats");
-
-$(document).ready(function () {
-  setInterval(function () {
-    $("#chat_content").load(window.location.href + " #chat_content");
-  }, 3000);
-});

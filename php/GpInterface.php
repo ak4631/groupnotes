@@ -35,57 +35,32 @@ $row=mysqli_fetch_assoc($result);
         <div id="gp-name">
           <h1><?php echo $row['gp_Name'] ?></h1>
           <div class="links">
-            <span><a href="#" id="rechats">Chats</a></span>
+            <button id="load_chat">Load Data</button>
             <span class="all-pdfs-show"><a href="#"><i class="fa-sharp fa-solid fa-paperclip fa-xl" style="color: #ced4de;"></i></a></span>
-            <a href="logout.php"><i class="fa-sharp fa-solid fa-right-from-bracket fa-xl" style="color: #a5ed07;"></i></a>
+            <a href="logout.php"><i class="fa-sharp fa-solid fa-right-from-bracket fa-xl" style="color: #a5ed07; padding:0px;"></i></a>
           </div>
         </div>
         <div class="main-content">
           <div id="gp-chats">
-            <div class="msg" id="chat_content">
-              <?php 
-                $chat_id=$_SESSION['id'];
-                $sql2="select * from chatdata where chat_id='$chat_id'";
-                $res=mysqli_query($conn,$sql2);
-
-                if(!$res){
-                  echo "Error is: ".mysqli_error($conn);
-                  exit;
-                }
-
-                while($allChats=mysqli_fetch_assoc($res)){
-                  $chat_num=$allChats['chat_cnt'];
-              ?>
-              <div class="chat-all">
-              <p>
-                <?php echo $allChats['chats'] ?>
-              </p>
-              <a href="del_chat.php?del_task=<?php echo $chat_num ?>" > <i class="fa-sharp fa-solid fa-trash fa-lg" style="color: #d60000;"></i></a>
-                </div>
-              <?php
-                }
-              ?>
-            </div>
+            
           </div>
           <footer>
+
             <div id="gp-send">
-              <form action="saveChat.php" method="post">
-                  
-                  <input
+              <form id="submitForm">
+                  <!-- <input
                     type="text"
                     name="chat"
                     id="chat"
                     placeholder="Enter your Message"
-                  />
+                  /> -->
+                  <textarea name="chat" id="chat" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
                 <span class="bringup"><a href="#">Upload Pdf</a></span>
                 <input type="submit" value="Send" id="send-message" />
-                
               </form>
             </div>
           </footer>
         </div>
-
-
         <div class="uploadform">
           <div class="header">
             <h3>Upload Pdf Here</h3>
@@ -96,8 +71,6 @@ $row=mysqli_fetch_assoc($result);
             <input type="submit" value="Upload" name="dataSubmit" />
           </form>
         </div>
-
-
         <div class="pdf-sec">
           <div class="title-pdf">
             <h1>ALL-PDFS</h1>
@@ -121,6 +94,12 @@ $row=mysqli_fetch_assoc($result);
         </div>
       </div>
     </div>
+    <div class="trial">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/script.js"></script>
-  </body>
+    <script src="../js/ajaxScript.js"></script>
+    
+    
+    </body>
 </html>

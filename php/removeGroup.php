@@ -2,7 +2,7 @@
 require "../includes/dbconnect.php";
 
 $gp_name=$_POST['gp-name'];
-$gp_password=$_POST['gp-pass'];
+$gp_password=md5($_POST['gp-pass']);
 $gp_admin=$_POST['ad-mail'];
 
 $sql="select gp_Name,gp_Password,gp_Admin,gp_id from group_details where gp_Password='$gp_password' and gp_Name='$gp_name' and gp_Admin='$gp_admin'";

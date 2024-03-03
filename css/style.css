@@ -34,7 +34,6 @@ body {
 }
 
 #gp-chats {
-    max-height: 86vh;
     /* border:2px solid blue; */
     box-sizing: border-box;
     overflow: auto;
@@ -63,36 +62,23 @@ body {
     margin: 2px;
 }
 
-/*
-#gp-send{
-    border:2px solid green; 
-    position: fixed;
-    width: 100%;
-    top: 94vh;
-    box-sizing: border-box;
-    border-radius: 9px;
-    background-color: whitesmoke;
-}
-@media (max-width:600px) {
-    #gp-send{
-        top:93vh;
-    }
-}
-#gp-send form{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        width: 99%;
-        margin: auto;
-}
-*/
+
 #gp-send form input {
     font-size: 20px;
     padding: 10px;
     /* font-weight: 800; */
     border-radius: 5px;
 }
+#gp-send textarea{
+    width: 1576px;
+    height: 50px;
+    border:2px solid black;
+    padding:5px;
+    font-size: 20px;
+    font-family: 'Bree Serif', serif;
+    resize: none;
 
+}
 form input[type="text"] {
     font-family: 'Bree Serif', serif;
     width: 95%;
@@ -114,12 +100,22 @@ form input[type="submit"] {
     border-radius: 5px;
     margin-bottom: 10px;
     gap: 10px;
-    font-family: 'Bree Serif', serif;
+}
+.chat-all pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
 }
 
 .chat-all p {
     width: 100%;
+    font-family: 'Bree Serif', serif;
     margin-bottom: 10px;
+}
+.chat-all button{
+    border: 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .uploadform {
@@ -276,6 +272,7 @@ form input[type="submit"] {
 
 .main-content {
     /*border: 2px solid blue;*/
+    min-height: 92vh;
     box-sizing: border-box;
     height: 100%;
     display: flex;
@@ -284,10 +281,22 @@ form input[type="submit"] {
 }
 
 .main-content #gp-chats {
-    height: 82vh;
-    /*border: 2px solid red;*/
+    height: 85vh;
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 1;
     display: flex;
     flex-direction: column-reverse;
+}
+.links{
+    letter-spacing: 3px;
+}
+.links button{
+    background-color: transparent;
+    border: 0px;
+    font-size: 1rem;
+    margin-right: 7px;
+    cursor: pointer;
 }
 
 @media(max-width:600px) {
@@ -312,4 +321,12 @@ form input[type="submit"] {
 .bringup {
     border: 4px solid black;
     text-align: center;
+}
+.links button{
+    border:2px solid black;
+    padding:0.3rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: blanchedalmond;
 }
